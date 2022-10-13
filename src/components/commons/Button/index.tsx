@@ -12,6 +12,7 @@ export function Button({
   children,
   asChild,
   color = 'cyan',
+  className,
   ...rest
 }: ButtonProps) {
   const Comp = asChild ? Slot : 'button'
@@ -20,7 +21,7 @@ export function Button({
     <Comp
       className={
         clsx(
-          'flex items-center justify-center py-4 px-3 h-12 transition-colors rounded font-semibold text-sm w-full focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:opacity-30',
+          'flex items-center justify-center py-3 px-4 h-12 transition-colors rounded font-semibold text-sm w-full focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 disabled:opacity-30',
           {
             'bg-cyan-500': color === 'cyan',
             'hover:bg-cyan-300': color === 'cyan',
@@ -39,7 +40,8 @@ export function Button({
 
             'text-black': color === 'cyan',
             'text-white': color === 'gray' || color === 'brand',
-          }
+          },
+          className,
         )
       }
       {...rest}

@@ -6,13 +6,16 @@ import { Checkbox, CheckboxProps } from './'
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
+  args: {
+    id: 'storybook'
+  },
   decorators: [
     (Story) => {
       return (
-        <div className="flex items-center gap-2">
+        <label className="flex items-center gap-2" htmlFor="storybook">
           {Story()}
           <Text size="sm">Lembrar-me por 30 dias</Text>
-        </div>
+        </label>
       )
     }
   ]
