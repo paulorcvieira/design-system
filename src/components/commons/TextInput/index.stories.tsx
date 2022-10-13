@@ -12,7 +12,8 @@ export default {
         <Envelope />
       </TextInput.Icon>,
       <TextInput.Input placeholder="Type you email here" />
-    ]
+    ],
+    color: 'brand',
   },
   argTypes: {
     children: {

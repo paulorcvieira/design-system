@@ -1,10 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { Loading } from './'
+import { Loading, LoadingProps } from './'
 
 export default {
   title: 'Components/Loading',
   component: Loading,
-} as Meta
+  args: {
+    color: 'brand'
+  }
+} as Meta<LoadingProps>
 
 export const Default: StoryObj = {}

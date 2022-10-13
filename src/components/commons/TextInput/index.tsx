@@ -1,14 +1,25 @@
 import { Slot } from '@radix-ui/react-slot'
+import clsx from 'clsx'
 import { InputHTMLAttributes, ReactNode } from 'react'
 
 export interface InputRootProps {
   children: ReactNode
+  color?: 'cyan' | 'brand' | 'gray'
 }
 
-function InputRoot({ children }: InputRootProps) {
+function InputRoot({ color = 'cyan', children }: InputRootProps) {
   return (
     <div
-      className="flex items-center gap-3 h-12 py-4 px-3 rounded bg-gray-800 w-full focus-within:ring-2 ring-cyan-300"
+      className={clsx(
+        'flex items-center gap-3 h-12 py-4 px-3 rounded bg-gray-800 w-full focus-within:ring-2',
+        {
+          'ring-cyan-300': color === 'cyan',
+
+          'ring-brand-300': color === 'brand',
+
+          'ring-gray-400': color === 'gray',
+        },
+      )}
     >
       {children}
     </div>
@@ -32,7 +43,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
 function InputComponent({ ...rest }: InputProps) {
   return (
     <input
-      className="bg-transparent flex-1 text-gray-100 text-xs placeholder:text-gray-400 w-full outline-none"
+      className="bg-transparent flex-1 text-gray-100 text-xs placeholder:text-gray-400 w-full border-transparent outline-none focus:border-transparent focus:ring-0"
       {...rest}
     />
   )

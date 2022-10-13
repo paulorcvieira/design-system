@@ -7,7 +7,8 @@ export default {
   title: 'Components/Checkbox',
   component: Checkbox,
   args: {
-    id: 'storybook'
+    id: 'storybook',
+    color: 'brand',
   },
   decorators: [
     (Story) => {
