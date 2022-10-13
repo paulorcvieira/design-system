@@ -23,3 +23,6 @@ commands.txt
 *.njsproj
 *.sln
 *.sw?
+
+# Storybook
+storybook-static
