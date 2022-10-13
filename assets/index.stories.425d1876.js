@@ -1,0 +1,2 @@
+import{C as o,m as r}from"./index.a2d56c3d.js";import{j as e}from"./jsx-runtime.98afaa0f.js";import"./index.2f688588.js";import"./iframe.6b3152ed.js";import"./IconBase.esm.ab54132b.js";const l={title:"Components/CloseButton",component:o,args:{title:"Fechar formul\xE1rio"},decorators:[t=>e(r,{children:t()})]},p={},c=["Default"];export{p as Default,c as __namedExportsOrder,l as default};
+//# sourceMappingURL=index.stories.425d1876.js.map
